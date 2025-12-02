@@ -1,0 +1,113 @@
+/* Admin Panel - Tailwind v4 Optimized Styles */
+
+/* Custom Admin Components - Only what Tailwind can't do */
+
+/* Admin Navigation Hover Effects */
+.admin-nav-item {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Admin Card Hover Effects */
+.admin-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-card:hover {
+  transform: translateY(-1px);
+}
+
+/* Admin Button Styles */
+.admin-btn-primary {
+  background: linear-gradient(135deg, rgb(59 130 246) 0%, rgb(37 99 235) 100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-btn-primary:hover {
+  background: linear-gradient(135deg, rgb(37 99 235) 0%, rgb(29 78 216) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.admin-btn-secondary {
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-btn-secondary:hover {
+  transform: translateY(-1px);
+}
+
+/* Admin Stats Cards */
+.admin-stat-value {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Admin Table Row Hover */
+.admin-table tbody tr {
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Admin Form Focus States */
+.admin-form-input:focus,
+.admin-form-select:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Admin Scrollbar */
+.admin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.admin-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 3px;
+}
+
+.admin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+/* Admin Animations */
+@keyframes admin-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.admin-fade-in {
+  animation: admin-fadeIn 0.3s ease-out;
+}
+
+/* Admin Responsive */
+@media (max-width: 768px) {
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-table-container {
+    overflow-x: auto;
+  }
+}
+
+/* Admin Dark Theme Variables */
+:root {
+  --admin-bg-primary: rgb(17 24 39);
+  --admin-bg-secondary: rgb(31 41 55);
+  --admin-bg-tertiary: rgb(55 65 81);
+  --admin-text-primary: rgb(243 244 246);
+  --admin-text-secondary: rgb(156 163 175);
+  --admin-text-muted: rgb(107 114 128);
+  --admin-primary: rgb(59 130 246);
+  --admin-primary-hover: rgb(37 99 235);
+  --admin-success: rgb(34 197 94);
+  --admin-warning: rgb(251 191 36);
+  --admin-error: rgb(239 68 68);
+}
